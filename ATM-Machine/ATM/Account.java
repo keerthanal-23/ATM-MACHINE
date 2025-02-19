@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Account {
-	// variables
+	
 	private int customerNumber;
 	private int pinNumber;
 	private double checkingBalance = 0;
@@ -206,10 +206,9 @@ public class Account {
 					System.out.print("\nChoice: ");
 					int choice = input.nextInt();
 					switch (choice) {
-						
 					case 1:
 						System.out.println("\nCurrent Savings Account Balance: " + moneyFormat.format(savingBalance));
-						System.out.print("\nAmount you want to transfer :22");
+						System.out.print("\nAmount you want to deposit into your savings account: ");
 						double amount = input.nextDouble();
 						if ((checkingBalance + amount) >= 0 && (savingBalance - amount) >= 0 && amount >= 0) {
 							calcSavingTransfer(amount);
